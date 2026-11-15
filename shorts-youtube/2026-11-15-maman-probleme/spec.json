@@ -1,0 +1,68 @@
+{
+ "slug": "maman-probleme",
+ "beats": [
+  {
+   "duree": 3.0,
+   "kicker": "ARNAQUE",
+   "lignes": [
+    "« *Maman*, j'ai",
+    "un problème… »"
+   ]
+  },
+  {
+   "duree": 3.5,
+   "lignes": [
+    "Un SMS d'un",
+    "*nouveau numéro*"
+   ],
+   "sous": [
+    "Un faux proche demande",
+    "de l'argent vite."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 1,
+   "lignes": [
+    "*Appelle* l'ancien",
+    "numéro"
+   ],
+   "sous": [
+    "Ou joins-le autrement."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 2,
+   "lignes": [
+    "Pose une *question*",
+    "précise"
+   ],
+   "sous": [
+    "Que seul ton proche connaît."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 3,
+   "lignes": [
+    "N'envoie *jamais*",
+    "d'argent dans l'urgence"
+   ],
+   "sous": [
+    "Prends le temps de vérifier."
+   ]
+  },
+  {
+   "duree": 4.5,
+   "lignes": [
+    "Tu as déjà reçu",
+    "ce *SMS* ?"
+   ],
+   "sous": [
+    "Raconte-le en commentaire ↓",
+    "Abonne-toi pour d'autres astuces."
+   ]
+  }
+ ]
+}

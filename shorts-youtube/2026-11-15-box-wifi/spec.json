@@ -1,0 +1,67 @@
+{
+ "slug": "box-wifi",
+ "beats": [
+  {
+   "duree": 3.0,
+   "kicker": "BOX INTERNET",
+   "lignes": [
+    "Ta box Wi-Fi est",
+    "une *passoire* ?"
+   ]
+  },
+  {
+   "duree": 3.5,
+   "lignes": [
+    "Elle protège",
+    "toute ta *maison*"
+   ],
+   "sous": [
+    "Pourtant on la configure une fois",
+    "et on l'oublie."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 1,
+   "lignes": [
+    "Chiffrement",
+    "*WPA2* ou *WPA3*"
+   ],
+   "sous": [
+    "Jamais l'ancien WEP."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 2,
+   "lignes": [
+    "Désactive le *WPS*"
+   ],
+   "sous": [
+    "La connexion rapide a des failles."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 3,
+   "lignes": [
+    "Garde la box",
+    "à *jour*"
+   ],
+   "sous": [
+    "Mises à jour automatiques."
+   ]
+  },
+  {
+   "duree": 4.5,
+   "lignes": [
+    "Quand as-tu changé",
+    "ton mot de passe *Wi-Fi* ?"
+   ],
+   "sous": [
+    "Dis-le en commentaire ↓",
+    "Abonne-toi pour d'autres astuces."
+   ]
+  }
+ ]
+}

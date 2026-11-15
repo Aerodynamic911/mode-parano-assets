@@ -1,0 +1,67 @@
+{
+ "slug": "vpn-gratuit",
+ "beats": [
+  {
+   "duree": 3.0,
+   "kicker": "VPN GRATUIT",
+   "lignes": [
+    "VPN gratuit :",
+    "qui *paie* ?"
+   ]
+  },
+  {
+   "duree": 3.5,
+   "lignes": [
+    "Des serveurs,",
+    "ça coûte *cher*"
+   ],
+   "sous": [
+    "Alors comment il se finance ?"
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 1,
+   "lignes": [
+    "Cherche son",
+    "*modèle économique*"
+   ],
+   "sous": [
+    "Pub ? Données ? Version payante ?"
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 2,
+   "lignes": [
+    "Lis sa politique",
+    "de *journaux*"
+   ],
+   "sous": [
+    "Que garde-t-il de ton activité ?"
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 3,
+   "lignes": [
+    "Méfie-toi des",
+    "services *inconnus*"
+   ],
+   "sous": [
+    "Surtout sans aucune explication."
+   ]
+  },
+  {
+   "duree": 4.5,
+   "lignes": [
+    "Tu utilises un",
+    "VPN *gratuit* ?"
+   ],
+   "sous": [
+    "Oui ou non en commentaire ↓",
+    "Abonne-toi pour d'autres astuces."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "slug": "objets-connectes",
+ "beats": [
+  {
+   "duree": 3.0,
+   "kicker": "OBJETS CONNECTÉS",
+   "lignes": [
+    "Caméras, enceintes,",
+    "jouets : *sécurisés* ?"
+   ]
+  },
+  {
+   "duree": 3.5,
+   "lignes": [
+    "Ils ont un micro,",
+    "une caméra, un *compte*"
+   ],
+   "sous": [
+    "Et parfois un mot de passe d'usine."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 1,
+   "lignes": [
+    "Change le mot de passe",
+    "*d'usine*"
+   ],
+   "sous": [
+    "Ou le code PIN par défaut."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 2,
+   "lignes": [
+    "Protège ton",
+    "*Wi-Fi*"
+   ],
+   "sous": [
+    "L'objet s'y connecte."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 3,
+   "lignes": [
+    "*Éteins-le* quand",
+    "tu ne t'en sers pas"
+   ],
+   "sous": [
+    "Moins de données captées."
+   ]
+  },
+  {
+   "duree": 4.5,
+   "lignes": [
+    "Combien d'objets",
+    "*connectés* chez toi ?"
+   ],
+   "sous": [
+    "Dis-le en commentaire ↓",
+    "Abonne-toi pour d'autres astuces."
+   ]
+  }
+ ]
+}

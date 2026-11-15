@@ -1,0 +1,79 @@
+{
+ "slug": "5-reglages-urgents",
+ "beats": [
+  {
+   "duree": 3.0,
+   "kicker": "5 RÉGLAGES URGENTS",
+   "lignes": [
+    "Change ces *5 réglages*",
+    "sur ton téléphone"
+   ]
+  },
+  {
+   "duree": 3.0,
+   "num": 1,
+   "lignes": [
+    "Un *code* pour",
+    "verrouiller l'écran"
+   ],
+   "sous": [
+    "Pas 0000 ni 1234."
+   ]
+  },
+  {
+   "duree": 3.0,
+   "num": 2,
+   "lignes": [
+    "Mises à jour",
+    "*automatiques*"
+   ],
+   "sous": [
+    "Elles ferment des failles."
+   ]
+  },
+  {
+   "duree": 3.0,
+   "num": 3,
+   "lignes": [
+    "La *2FA* sur ta",
+    "messagerie"
+   ],
+   "sous": [
+    "Un mot de passe seul ne suffit plus."
+   ]
+  },
+  {
+   "duree": 3.0,
+   "num": 4,
+   "lignes": [
+    "Retire les accès",
+    "*inutiles*"
+   ],
+   "sous": [
+    "Micro, position, contacts."
+   ]
+  },
+  {
+   "duree": 3.0,
+   "num": 5,
+   "lignes": [
+    "Un mot de passe",
+    "*unique* par compte"
+   ],
+   "sous": [
+    "Avec un gestionnaire."
+   ]
+  },
+  {
+   "duree": 4.5,
+   "lignes": [
+    "Combien en as-tu",
+    "déjà *faits* ?"
+   ],
+   "sous": [
+    "Dis-moi ton score en commentaire ↓",
+    "Abonne-toi pour d'autres astuces."
+   ]
+  }
+ ]
+}

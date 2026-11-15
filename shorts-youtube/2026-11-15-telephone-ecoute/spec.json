@@ -1,0 +1,69 @@
+{
+ "slug": "telephone-ecoute",
+ "beats": [
+  {
+   "duree": 3.0,
+   "kicker": "VIE PRIVÉE",
+   "lignes": [
+    "Ton téléphone",
+    "t'écoute-t-il *vraiment* ?"
+   ]
+  },
+  {
+   "duree": 3.5,
+   "lignes": [
+    "Un petit *point*",
+    "en haut de l'écran"
+   ],
+   "sous": [
+    "Orange : une appli utilise le micro.",
+    "Vert : elle utilise la caméra."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 1,
+   "lignes": [
+    "*Repère* le point"
+   ],
+   "sous": [
+    "Il s'affiche sur iPhone et",
+    "sur les Android récents."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 2,
+   "lignes": [
+    "Ouvre les *réglages*"
+   ],
+   "sous": [
+    "Liste les applis qui ont accès",
+    "au micro."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 3,
+   "lignes": [
+    "Retire l'accès",
+    "aux applis *inutiles*"
+   ],
+   "sous": [
+    "Elle en a besoin ? Autorise",
+    "seulement pendant l'usage."
+   ]
+  },
+  {
+   "duree": 4.5,
+   "lignes": [
+    "Combien d'applis",
+    "ont accès à ton *micro* ?"
+   ],
+   "sous": [
+    "Dis-le en commentaire ↓",
+    "Abonne-toi pour d'autres astuces."
+   ]
+  }
+ ]
+}
