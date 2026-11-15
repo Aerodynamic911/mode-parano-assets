@@ -1,0 +1,67 @@
+{
+ "slug": "double-authentification",
+ "beats": [
+  {
+   "duree": 3.0,
+   "kicker": "DOUBLE AUTHENTIFICATION",
+   "lignes": [
+    "Un mot de passe",
+    "ne suffit *plus*"
+   ]
+  },
+  {
+   "duree": 3.5,
+   "lignes": [
+    "Si on le *vole*,",
+    "tout est ouvert"
+   ],
+   "sous": [
+    "Sauf avec une deuxième clé."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 1,
+   "lignes": [
+    "Active la *2FA*"
+   ],
+   "sous": [
+    "Sur ta messagerie et ta banque",
+    "d'abord."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 2,
+   "lignes": [
+    "Préfère une *appli*",
+    "aux SMS"
+   ],
+   "sous": [
+    "Un SMS peut être détourné."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 3,
+   "lignes": [
+    "Garde tes *codes*",
+    "de secours"
+   ],
+   "sous": [
+    "Hors de ton téléphone."
+   ]
+  },
+  {
+   "duree": 4.5,
+   "lignes": [
+    "Tu l'as activée",
+    "sur ta *messagerie* ?"
+   ],
+   "sous": [
+    "Dis-le en commentaire ↓",
+    "Abonne-toi pour d'autres astuces."
+   ]
+  }
+ ]
+}

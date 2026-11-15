@@ -1,0 +1,71 @@
+{
+ "slug": "mots-de-passe-top",
+ "beats": [
+  {
+   "duree": 3.0,
+   "kicker": "MOTS DE PASSE",
+   "lignes": [
+    "Ton mot de passe",
+    "est-il dans la liste",
+    "des *pires* ?"
+   ]
+  },
+  {
+   "duree": 3.5,
+   "lignes": [
+    "123456",
+    "azerty",
+    "password"
+   ],
+   "sous": [
+    "Parmi les plus courants.",
+    "Les pirates les testent en premier."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 1,
+   "lignes": [
+    "Fais-le *long*"
+   ],
+   "sous": [
+    "12 caractères minimum,",
+    "ou une phrase de 7 mots."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 2,
+   "lignes": [
+    "Un mot de passe",
+    "par *compte*"
+   ],
+   "sous": [
+    "Jamais le même deux fois."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 3,
+   "lignes": [
+    "Laisse un *outil*",
+    "s'en souvenir"
+   ],
+   "sous": [
+    "Un gestionnaire de mots de passe."
+   ]
+  },
+  {
+   "duree": 4.5,
+   "lignes": [
+    "Combien de comptes",
+    "ont le *même*",
+    "mot de passe ?"
+   ],
+   "sous": [
+    "Dis-le en commentaire ↓",
+    "Abonne-toi pour d'autres astuces."
+   ]
+  }
+ ]
+}

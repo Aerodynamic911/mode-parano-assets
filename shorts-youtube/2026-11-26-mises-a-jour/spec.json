@@ -1,0 +1,69 @@
+{
+ "slug": "mises-a-jour",
+ "beats": [
+  {
+   "duree": 3.0,
+   "kicker": "MISES À JOUR",
+   "lignes": [
+    "Tu repousses",
+    "la mise à jour ?"
+   ]
+  },
+  {
+   "duree": 3.5,
+   "lignes": [
+    "Elle ferme des",
+    "*failles* connues"
+   ],
+   "sous": [
+    "Les pirates les exploitent",
+    "dès qu'elles sont publiques."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 1,
+   "lignes": [
+    "Active les mises",
+    "à jour *auto*"
+   ],
+   "sous": [
+    "Téléphone, ordinateur, applis."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 2,
+   "lignes": [
+    "Redémarre",
+    "*vraiment*"
+   ],
+   "sous": [
+    "Certaines ne s'installent",
+    "qu'après."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 3,
+   "lignes": [
+    "Jette les",
+    "*vieux* appareils"
+   ],
+   "sous": [
+    "Sans mises à jour, plus protégés."
+   ]
+  },
+  {
+   "duree": 4.5,
+   "lignes": [
+    "Ton téléphone",
+    "est-il à *jour* ?"
+   ],
+   "sous": [
+    "Dis-le en commentaire ↓",
+    "Abonne-toi pour d'autres astuces."
+   ]
+  }
+ ]
+}

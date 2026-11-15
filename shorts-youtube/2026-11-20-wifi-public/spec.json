@@ -1,0 +1,68 @@
+{
+ "slug": "wifi-public",
+ "beats": [
+  {
+   "duree": 3.0,
+   "kicker": "WI-FI PUBLIC",
+   "lignes": [
+    "Gare, café, hôtel :",
+    "le Wi-Fi est-il *sûr* ?"
+   ]
+  },
+  {
+   "duree": 3.5,
+   "lignes": [
+    "Tout le monde",
+    "s'y connecte"
+   ],
+   "sous": [
+    "Toi, et n'importe qui d'autre."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 1,
+   "lignes": [
+    "Pas de *banque*",
+    "dessus"
+   ],
+   "sous": [
+    "Utilise la 4G ou la 5G."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 2,
+   "lignes": [
+    "Coupe la connexion",
+    "*automatique*"
+   ],
+   "sous": [
+    "Ton téléphone ne se connecte",
+    "plus sans te demander."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 3,
+   "lignes": [
+    "Vérifie le *nom*",
+    "du réseau"
+   ],
+   "sous": [
+    "Demande-le au personnel."
+   ]
+  },
+  {
+   "duree": 4.5,
+   "lignes": [
+    "Tu te connectes",
+    "aux Wi-Fi *publics* ?"
+   ],
+   "sous": [
+    "Oui ou non en commentaire ↓",
+    "Abonne-toi pour d'autres astuces."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "slug": "permissions-applis",
+ "beats": [
+  {
+   "duree": 3.0,
+   "kicker": "PERMISSIONS",
+   "lignes": [
+    "Cette appli a-t-elle",
+    "besoin de ton *micro* ?"
+   ]
+  },
+  {
+   "duree": 3.5,
+   "lignes": [
+    "Beaucoup demandent",
+    "*trop* d'accès"
+   ],
+   "sous": [
+    "Micro, position, contacts."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 1,
+   "lignes": [
+    "Ouvre les",
+    "*réglages*"
+   ],
+   "sous": [
+    "Rubrique confidentialité."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 2,
+   "lignes": [
+    "Position :",
+    "« *pendant* l'usage »"
+   ],
+   "sous": [
+    "Jamais « toujours »",
+    "sans bonne raison."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 3,
+   "lignes": [
+    "Retire ce qui",
+    "ne sert *à rien*"
+   ],
+   "sous": [
+    "Une lampe de poche",
+    "n'a pas besoin de tes contacts."
+   ]
+  },
+  {
+   "duree": 4.5,
+   "lignes": [
+    "Quelle appli",
+    "en demande *trop* ?"
+   ],
+   "sous": [
+    "Dis-le en commentaire ↓",
+    "Abonne-toi pour d'autres astuces."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "slug": "sauvegarde-3-2-1",
+ "beats": [
+  {
+   "duree": 3.0,
+   "kicker": "SAUVEGARDE",
+   "lignes": [
+    "Si ton téléphone",
+    "*meurt* demain ?"
+   ]
+  },
+  {
+   "duree": 3.5,
+   "lignes": [
+    "Photos, documents :",
+    "tout *disparaît*"
+   ],
+   "sous": [
+    "Sans sauvegarde."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 3,
+   "lignes": [
+    "*3* copies"
+   ],
+   "sous": [
+    "L'original et deux sauvegardes."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 2,
+   "lignes": [
+    "*2* supports",
+    "différents"
+   ],
+   "sous": [
+    "Disque externe et cloud, par exemple."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 1,
+   "lignes": [
+    "*1* copie",
+    "ailleurs"
+   ],
+   "sous": [
+    "Hors de chez toi."
+   ]
+  },
+  {
+   "duree": 4.5,
+   "lignes": [
+    "Quand as-tu fait",
+    "ta dernière *sauvegarde* ?"
+   ],
+   "sous": [
+    "Dis-le en commentaire ↓",
+    "Abonne-toi pour d'autres astuces."
+   ]
+  }
+ ]
+}

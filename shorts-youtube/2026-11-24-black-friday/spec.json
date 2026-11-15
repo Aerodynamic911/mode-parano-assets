@@ -1,0 +1,68 @@
+{
+ "slug": "black-friday",
+ "beats": [
+  {
+   "duree": 3.0,
+   "kicker": "BLACK FRIDAY",
+   "lignes": [
+    "Les *arnaques*",
+    "arrivent aussi"
+   ]
+  },
+  {
+   "duree": 3.5,
+   "lignes": [
+    "Un prix trop beau",
+    "pour être *vrai* ?"
+   ],
+   "sous": [
+    "C'est souvent un piège."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 1,
+   "lignes": [
+    "Regarde",
+    "l'*adresse*"
+   ],
+   "sous": [
+    "Une faute dans le nom du site ?",
+    "Ferme la page."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 2,
+   "lignes": [
+    "Un site *connu*",
+    "ou vérifié"
+   ],
+   "sous": [
+    "Cherche les avis hors du site."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 3,
+   "lignes": [
+    "Paie avec une",
+    "carte *virtuelle*"
+   ],
+   "sous": [
+    "Si ta banque la propose."
+   ]
+  },
+  {
+   "duree": 4.5,
+   "lignes": [
+    "Tu achètes quoi",
+    "ce *vendredi* ?"
+   ],
+   "sous": [
+    "Dis-le en commentaire ↓",
+    "Abonne-toi pour d'autres astuces."
+   ]
+  }
+ ]
+}

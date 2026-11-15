@@ -1,0 +1,68 @@
+{
+ "slug": "faux-sms",
+ "beats": [
+  {
+   "duree": 3.0,
+   "kicker": "FAUX SMS",
+   "lignes": [
+    "Ce SMS est-il",
+    "un *piège* ?"
+   ]
+  },
+  {
+   "duree": 3.5,
+   "lignes": [
+    "Colis bloqué,",
+    "amende à payer"
+   ],
+   "sous": [
+    "Les arnaques les plus courantes."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 1,
+   "lignes": [
+    "L'*urgence*"
+   ],
+   "sous": [
+    "« Payez sous 24 h »",
+    "= méfiance."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 2,
+   "lignes": [
+    "Le *lien*",
+    "bizarre"
+   ],
+   "sous": [
+    "N'appuie pas.",
+    "Va sur le site officiel."
+   ]
+  },
+  {
+   "duree": 3.5,
+   "num": 3,
+   "lignes": [
+    "Tu n'attendais",
+    "*rien*"
+   ],
+   "sous": [
+    "Pas de colis ? Pas de clic."
+   ]
+  },
+  {
+   "duree": 4.5,
+   "lignes": [
+    "Tu en as reçu",
+    "un *cette semaine* ?"
+   ],
+   "sous": [
+    "Dis-le en commentaire ↓",
+    "Abonne-toi pour d'autres astuces."
+   ]
+  }
+ ]
+}
