@@ -7,14 +7,14 @@ const TOOLS={
   ["Reste prévenu(e)","Avec « Notify Me », tu es averti(e) si ton adresse apparaît dans une future fuite."],
   ["Ton adresse apparaît ?","Ça ne prouve pas que tu es piraté(e). Change le mot de passe du compte concerné, ne le réutilise nulle part et active la double authentification."],
   ["Les limites","Le site ne connaît que les fuites qu'il a recensées : une adresse absente ne veut pas dire « aucun risque »."]],
-  cta:["Enregistre ce post","Rendez-vous mercredi prochain à 12h30 pour un nouvel outil.","Aucun partenariat, aucun lien affilié"]},
+  cta:["Enregistre ce post","Rendez-vous mercredi prochain à 12h30 pour un nouvel outil."]},
  'instagram-2026-12/68-outil-signal':{kicker:"L'OUTIL DU MERCREDI",title:"Une messagerie qui ne lit pas tes messages",sub:"Signal : gratuit, sans pub, chiffré par défaut.",
   steps:[["C'est quoi ?","Une messagerie gratuite, gérée par une association à but non lucratif. Elle existe sur Android, iPhone et ordinateur."],
   ["Chiffrée en permanence","Messages et appels sont toujours chiffrés de bout en bout. Signal dit ne pas pouvoir les lire."],
   ["Très peu de données","D'après Signal : ton numéro pour l'inscription, le minimum technique, pas de pub et pas de suivi. Ton historique reste sur ton appareil."],
   ["Pour démarrer","Installe l'appli depuis le magasin officiel, inscris-toi, puis invite un proche. Elle ne sert que si tes contacts l'utilisent aussi."],
   ["Les limites","Un numéro de téléphone est demandé à l'inscription, et tes données techniques peuvent être transférées vers les États-Unis et d'autres pays, selon sa politique."]],
-  cta:["Enregistre ce post","Rendez-vous mercredi prochain à 12h30 pour un nouvel outil.","Aucun partenariat, aucun lien affilié"]}};
+  cta:["Enregistre ce post","Rendez-vous mercredi prochain à 12h30 pour un nouvel outil."]}};
 const css=`*{margin:0;box-sizing:border-box}body{background:#070D0A;color:#F5F7F6;font-family:Inter;position:relative}
 .br{position:absolute;top:70px;width:100%;text-align:center;font:700 30px Poppins;color:#00C46A}
 .dots{position:absolute;bottom:62px;width:100%;display:flex;justify-content:center;gap:12px}.dots i{width:14px;height:14px;border-radius:50%;background:#3a403d}.dots i.on{background:#00C46A}
@@ -29,7 +29,7 @@ for(const [dir,T] of Object.entries(TOOLS)){
  const dots=i=>slides.map((_,j)=>`<i class="${j==i?'on':''}"></i>`).join('');
  for(let i=0;i<slides.length;i++){const x=slides[i];
   const body=`${x.t!='step'?'<div class="br">mode.parano</div>':''}<div class="c ${x.t=='step'?'st':'ctr'}">`+
-  (x.t=='cover'?`<div class="k">${T.kicker}</div><h1>${T.title}</h1><p>${T.sub}</p><div class="sw">SWIPE  ›</div>`:x.t=='step'?`<div class="n">${x.n}</div><h1>${x.h}</h1><p>${x.p}</p>`:`<h1>${T.cta[0]}</h1><p>${T.cta[1]}</p><div class="b">${T.cta[2]}</div>`)+`</div><div class="dots">${dots(i)}</div>`;
+  (x.t=='cover'?`<div class="k">${T.kicker}</div><h1>${T.title}</h1><p>${T.sub}</p><div class="sw">SWIPE  ›</div>`:x.t=='step'?`<div class="n">${x.n}</div><h1>${x.h}</h1><p>${x.p}</p>`:`<h1>${T.cta[0]}</h1><p>${T.cta[1]}</p>`)+`</div><div class="dots">${dots(i)}</div>`;
   await pg.setContent(`<html><body style="width:1080px;height:1350px"><style>${css}</style>${body}</body></html>`);await pg.waitForTimeout(150);
   await pg.screenshot({path:`${dir}/0${i+1}.jpg`,type:'jpeg',quality:92});}}
 await b.close()})();
