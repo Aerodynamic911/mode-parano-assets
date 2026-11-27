@@ -1,0 +1,56 @@
+{
+ "Liftoff": {
+  "titre": "Liftoff",
+  "artiste": "Solauw Sound",
+  "fichier": "Liftoff.m4a",
+  "depart_s": 112.31,
+  "duree_s": 28,
+  "tempo_bpm": 129.2,
+  "loudness_lufs": -18
+ },
+ "Overload": {
+  "titre": "Overload",
+  "artiste": "Solauw Sound",
+  "fichier": "Overload.m4a",
+  "depart_s": 78.67,
+  "duree_s": 28,
+  "tempo_bpm": 129.2,
+  "loudness_lufs": -18
+ },
+ "Eclipse": {
+  "titre": "Eclipse",
+  "artiste": "Solauw Sound",
+  "fichier": "Eclipse.m4a",
+  "depart_s": 97.71,
+  "duree_s": 28,
+  "tempo_bpm": 123.0,
+  "loudness_lufs": -18
+ },
+ "Friction": {
+  "titre": "Friction",
+  "artiste": "Solauw Sound",
+  "fichier": "Friction.m4a",
+  "depart_s": 32.14,
+  "duree_s": 28,
+  "tempo_bpm": 129.2,
+  "loudness_lufs": -18
+ },
+ "Apogee": {
+  "titre": "Apogee",
+  "artiste": "Solauw Sound",
+  "fichier": "Apogee.m4a",
+  "depart_s": 65.55,
+  "duree_s": 28,
+  "tempo_bpm": 99.4,
+  "loudness_lufs": -18
+ },
+ "Flow": {
+  "titre": "Flow",
+  "artiste": "Solauw Sound",
+  "fichier": "Flow.m4a",
+  "depart_s": 87.38,
+  "duree_s": 28,
+  "tempo_bpm": 123.0,
+  "loudness_lufs": -18
+ }
+}

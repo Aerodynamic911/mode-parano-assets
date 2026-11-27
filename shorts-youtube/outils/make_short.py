@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Fabrique un Short YouTube vertical (1080x1920, 30 i/s, H.264) à partir d'un fichier spec.json.
 
-Usage : python3 make_short.py <dossier-du-short>      (lit <dossier>/spec.json, écrit <dossier>/short.mp4 et cover.jpg)
+Usage : python3 make_short.py <dossier-du-short> [fichier-de-sortie]      (lit <dossier>/spec.json, écrit <dossier>/short.mp4 et cover.jpg ;
+        avec un 2e argument (ex. short-musique.mp4), n'écrit que ce fichier : pour garder le short.mp4 déjà publié)
 
 Format du spec.json :
 {
@@ -11,12 +12,31 @@ Format du spec.json :
     ...
   ]
 }
-- « *mot* » met le mot en vert. « num » = numéro dans une pastille (1, 2, 3...). Pas de son : une piste silencieuse est ajoutée.
+- « *mot* » met le mot en vert. « num » = numéro dans une pastille (1, 2, 3...).
+- Musique (depuis le 27/11/2026) : chaque vidéo porte un passage de musique de Solauw Sound (dossier ../musique/, voir morceaux.json).
+  Clé facultative « musique » du spec.json : "Eclipse" (un des 6 titres : Liftoff, Overload, Eclipse, Friction, Apogee, Flow) ou false pour une vidéo sans musique.
+  Si la clé manque, le titre est choisi automatiquement (même vidéo = même titre). Fondu d'entrée 0,3 s, fondu de sortie 1,3 s, niveau -18 LUFS.
+  Le clin d'œil à l'artiste (« ♪ Solauw Sound · Titre ») est dessiné en bas de l'image. Pour une vidéo déjà faite : outils/ajoute_musique.py.
 Identité mode.parano : fond #070D0A, texte #F5F7F6, vert #00C46A, Poppins Bold + Inter Regular.
 Zones de sécurité Shorts : texte entre y=330 et y=1380, marges de 90 px (l'interface YouTube couvre le bas et la droite).
 """
-import json, re, subprocess, sys, pathlib
+import json, re, subprocess, sys, pathlib, zlib
 from PIL import Image, ImageDraw, ImageFont
+
+MUSIQUE_DIR = pathlib.Path(__file__).resolve().parent.parent.parent / "musique"
+FONDU_ENTREE, FONDU_SORTIE = 0.3, 1.3
+
+def morceaux():
+    return json.loads((MUSIQUE_DIR / "morceaux.json").read_text(encoding="utf-8"))
+
+def choisir_morceau(spec):
+    """Titre de musique d'un spec : valeur de « musique », ou choix automatique stable à partir du slug ; None si false."""
+    m = spec.get("musique", "auto")
+    if m is False or m is None: return None
+    liste = sorted(morceaux())
+    if m == "auto": return liste[zlib.crc32(spec.get("slug", "").encode()) % len(liste)]
+    if m not in liste: sys.exit(f"Morceau inconnu : {m} (choix : {', '.join(liste)})")
+    return m
 
 W, H, FPS = 1080, 1920, 30
 BG = (7, 13, 10); WH = (245, 247, 246); GR = (0, 196, 106); GY = (130, 140, 135)
@@ -24,6 +44,7 @@ B = "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"
 R = "/usr/share/fonts/opentype/inter/Inter-Regular.otf"
 F_MAIN = ImageFont.truetype(B, 88); F_KICK = ImageFont.truetype(B, 38)
 F_SUB = ImageFont.truetype(R, 52); F_NUM = ImageFont.truetype(B, 64); F_BRAND = ImageFont.truetype(R, 36)
+F_CREDIT = ImageFont.truetype(R, 30); GR_DISCRET = (70, 150, 110)
 
 def parse(line):
     """'texte *vert* texte' -> [(texte, couleur)]"""
@@ -74,24 +95,49 @@ def beat_layer(b):
             draw_segs(d, [(s, (225, 230, 228))], F_SUB, y); y += 72
     return layer
 
-def base_frame():
+def credit_texte(morceau):
+    return f"Solauw Sound · {morceau}"
+
+def dessine_note(d, x, y, h, couleur):
+    """Petite croche dessinée à la main (indépendante des polices) : tête ovale, hampe, crochet. (x, y) = coin haut gauche."""
+    r = h * 0.17
+    cx, cy = x + r, y + h - r
+    d.ellipse((cx - r * 1.25, cy - r, cx + r * 1.25, cy + r), fill=couleur)
+    hx = cx + r * 1.2
+    d.rectangle((hx - h * 0.045, y, hx + h * 0.045, cy), fill=couleur)
+    d.polygon([(hx, y), (hx + h * 0.34, y + h * 0.28), (hx + h * 0.30, y + h * 0.46), (hx, y + h * 0.22)], fill=couleur)
+
+def base_frame(morceau=None):
     im = Image.new("RGB", (W, H), BG); d = ImageDraw.Draw(im)
     w = d.textlength("@mode.parano", font=F_BRAND)
     d.text(((W - w) / 2, 1450), "@mode.parano", font=F_BRAND, fill=GY)
+    if morceau:                                      # clin d'œil à l'artiste, discret, au-dessus du nom du compte
+        t = credit_texte(morceau); w = d.textlength(t, font=F_CREDIT); ic = 30; gap = 12
+        x0 = (W - (ic + gap + w)) / 2
+        dessine_note(d, x0, 1399, ic, GR_DISCRET)
+        d.text((x0 + ic + gap, 1398), t, font=F_CREDIT, fill=GR_DISCRET)
     return im
 
-def main(dossier):
+def main(dossier, sortie="short.mp4"):
     dossier = pathlib.Path(dossier)
     spec = json.loads((dossier / "spec.json").read_text(encoding="utf-8"))
     beats = spec["beats"]
     total = sum(b["duree"] for b in beats)
     layers = [beat_layer(b) for b in beats]
-    base = base_frame()
-    out = dossier / "short.mp4"; tmp = dossier / "short.tmp.mp4"
-    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-           "-f", "lavfi", "-i", "anullsrc=channel_layout=stereo:sample_rate=44100",
-           "-vf", "setsar=1,format=yuv420p", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
-           "-c:a", "aac", "-b:a", "96k", "-shortest", "-movflags", "+faststart", str(tmp)]
+    morceau = choisir_morceau(spec)
+    base = base_frame(morceau)
+    out = dossier / sortie; tmp = dossier / (sortie + ".tmp.mp4")
+    if morceau:
+        info = morceaux()[morceau]
+        if total > info["duree_s"] - 0.5: sys.exit(f"Vidéo de {total:.1f} s : passage de {morceau} trop court ({info['duree_s']} s)")
+        audio_in = ["-i", str(MUSIQUE_DIR / info["fichier"])]
+        af = f"afade=t=in:st=0:d={FONDU_ENTREE},afade=t=out:st={total - FONDU_SORTIE:.2f}:d={FONDU_SORTIE}"
+    else:                                            # sans musique : piste silencieuse
+        audio_in = ["-f", "lavfi", "-i", "anullsrc=channel_layout=stereo:sample_rate=44100"]; af = "anull"
+    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"] + audio_in + [
+           "-map", "0:v", "-map", "1:a", "-vf", "setsar=1,format=yuv420p", "-af", af, "-t", f"{total:.3f}",
+           "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
+           "-c:a", "aac", "-b:a", "192k" if morceau else "96k", "-ar", "44100", "-movflags", "+faststart", str(tmp)]
     p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     nframes = int(round(total * FPS)); t0 = 0.0; idx = 0
     starts = []
@@ -113,13 +159,13 @@ def main(dossier):
         if a < 1.0:
             r, g, bl, al = lay.split(); al = al.point(lambda v: int(v * a)); lay = Image.merge("RGBA", (r, g, bl, al))
         frame.paste(lay, (0, rise), lay)
-        if not cover_done and lt > 0.5:
+        if sortie == "short.mp4" and not cover_done and lt > 0.5:
             frame.convert("RGB").save(dossier / "cover.jpg", quality=92); cover_done = True
         p.stdin.write(frame.tobytes())
     p.stdin.close(); p.wait()
     if p.returncode == 0: tmp.rename(out)
     else: sys.exit("ffmpeg a échoué")
-    print(f"OK {out} ({total:.1f} s)")
+    print(f"OK {out} ({total:.1f} s, musique : {morceau or 'aucune'})")
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else "short.mp4")
